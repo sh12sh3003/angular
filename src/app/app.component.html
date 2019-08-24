@@ -1,0 +1,45 @@
+<div style="text-align:left;width:500px;">
+  <h1>
+    {{ title }}!
+  </h1>
+
+  <table *ngIf="arrBirds">
+    <!-- ADD HEADERS -->
+    <tr>
+      <th>ID</th>
+      <th>Name of Bird</th>
+      <th>Type of Bird</th>
+      <th>sciencetific name</th>
+    </tr>
+
+    <!-- BIND ARRAY TO TABLE -->
+    <tr *ngFor="let bird of arrBirds">
+      <td>{{bird.ID}}</td>
+      <td>{{bird.Name}}</td>
+      <td>{{bird.Type}}</td>
+      <td>{{bird.Scientific}}</td>
+    </tr>
+  </table>
+</div>
+<br />
+<br />
+<br />
+<a routerLink="new-cmp">New component</a>&nbsp;
+<a routerLink="new-cmp1">second component</a>
+&nbsp;
+<a routerLink="clicktoform">click here to form</a>
+<br />
+<br />
+<div class="container-fluid">
+  <div style="color: blue;">
+    <h1>{{title}}</h1>
+    <h3>{{description}}</h3>
+  </div>
+
+  <nav>
+    <a routerLink="customers" class="btn btn-primary active" role="button" routerLinkActive="active">Customers</a>
+    <a routerLink="add" class="btn btn-primary active" role="button" routerLinkActive="active">Add</a>
+  </nav>
+  <router-outlet></router-outlet>
+</div>
+<router-outlet></router-outlet>
